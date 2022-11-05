@@ -1,0 +1,40 @@
+{
+  "name": "prisma-cleaner",
+  "version": "1.0.0",
+  "description": "Clean up database with Prisma for testing callback",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": "16"
+  },
+  "scripts": {
+    "pretest": "pg_ctl -D db/pgdata start && prisma migrate dev",
+    "test": "mocha",
+    "posttest": "pg_ctl -D db/pgdata stop"
+  },
+  "prettier": "prettier-config-standard",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cc-kawakami/prisma-cleaner.git"
+  },
+  "keywords": [
+    "prisma",
+    "db",
+    "jest",
+    "mocha"
+  ],
+  "author": "Moeki Kawakami",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cc-kawakami/prisma-cleaner/issues"
+  },
+  "homepage": "https://github.com/cc-kawakami/prisma-cleaner#readme",
+  "dependencies": {
+    "@prisma/client": "^4.5.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.1.0",
+    "prettier-config-standard": "^5.0.0",
+    "prisma": "^4.5.0"
+  }
+}
