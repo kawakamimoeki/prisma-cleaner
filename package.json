@@ -1,6 +1,6 @@
 {
   "name": "prisma-cleaner",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Clean up database with Prisma for testing callback",
   "main": "index.js",
   "type": "module",
